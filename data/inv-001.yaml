@@ -1,0 +1,15 @@
+Number: INV-001
+Date: 2023-06-01
+Customer: John Doe
+Items:
+  - Name: Item 1
+    Quantity: 2
+    UnitCost: 10.5
+    Subtotal: 21
+  - Name: Item 2
+    Quantity: 3
+    UnitCost: 8.75
+    Subtotal: 26.25
+Total: 47.25
+Tax: 5.5
+GrandTotal: 52.75

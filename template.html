@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Invoice</title>
+    <style>
+        .page-break {
+            page-break-before: always;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Invoice</h1>
+    <hr>
+    <p>Invoice Number: {{.Number}}</p>
+    <p>Date: {{.Date}}</p>
+    <p>Customer: {{.Customer}}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Unit Cost</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .Items}}
+            <tr>
+                <td>{{.Name}}</td>
+                <td>{{.Quantity}}</td>
+                <td>{{.UnitCost}}</td>
+                <td>{{.Subtotal}}</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+    <p>Total: {{.Total}}</p>
+    <p>Tax: {{.Tax}}</p>
+    <p>Grand Total: {{.GrandTotal}}</p>
+</body>
+
+</html>
